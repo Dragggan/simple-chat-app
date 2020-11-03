@@ -5,17 +5,19 @@ function MesageList({messages,recivedMesages}) {
     return (
         <div>
            <div className="message-list">                 
-            {messages.map(message => {
+            {messages.slice(-3).map(message => {
               return (
-               <p className='containermesage' key={message.id}>
+               <div className={`${message.author==="Dragan" ? "containermesage-left" : "containermesage-right"}`}  
+                key={message._id}>
+
                  <div className="id">
-                   {message.senderId}
+                   {message.author}
                  </div>
                  <div className='mesagetext'>
-                   {message.text}
+                   {message.message}
                  </div>
                   <div  className="id"> {new Date().toLocaleDateString()}</div>
-               </p>
+               </div>
              )
            })}
            {/* <p className='recivedMesages'>{recivedMesages[0].text}</p> */}

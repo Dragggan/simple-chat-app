@@ -1,11 +1,17 @@
 body {
-  background-image: url('../../assets/bodyBG.png')
+  background-image: url('../../assets/bodyBG.png');
 }
 
+.message-list {
+  border:solid red 1px;
+  position: relative;
+    height: 70vh;
+    top: 40px;
+}
 
-
-.containermesage {
+.containermesage-left {
   width: 200px;
+  max-width: 640px;
   height: 70px;
   background-color: white;
   border-radius: 10px;
@@ -19,6 +25,23 @@ body {
     padding-left: 10px;
     padding-top: 5px;
 
+}
+.containermesage-right {
+  width: 200px;
+  max-width: 640px;
+  height: 70px;
+  background-color: #efef84;
+  border-radius: 10px;
+  border: solid gray 1px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  position: relative;
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 10px;
+  float: right;
+  right: 24px;
 }
 
 div.id {
