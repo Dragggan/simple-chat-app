@@ -10,11 +10,7 @@ import { TOKEN_KEY } from './constant/tokenKey';
 function App() {
 
   const [messages, setMesages] = useState([]);
-  const [open, isOpen] = useState(false);
-  const [connected, isConnected] = useState(false);
 
-
-  const ws = new WebSocket(`ws://localhost:3000`);
 
   useEffect(() => {
 
@@ -22,28 +18,17 @@ function App() {
 ${TOKEN_KEY}`)
       .then(response => setMesages(response.data))
       .catch(err => console.log(err));
-
-    return () => {
-      console.log("cleanup code");
-    };
   }, []);
 
   const sendDataToParent = (data) => {
-    setMesages(data);
+    // console.log(data); 
+    //MESAGES FROM CHILD COMPONENT, REPLACMENT FOR WEB SOCKET ? 
   };
-
-
-  // const handleData = (data) => {
-  //  debugger;
-  //   // this.setState({count: this.state.count + result.movement});
-  // }
 
   return (
     <div className="App">
       <MesageList messages={messages} />
       <SendMesage sendDataToParent={(data) => sendDataToParent(data)} />
-      {/* <Websocket url='ws://localhost:3000'
-              onMessage={(data)=>handleData(data)}/> */}
     </div>
   );
 }

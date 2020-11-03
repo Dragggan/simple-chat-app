@@ -17,7 +17,6 @@ function MesageList({ messages }) {
             <div className='mesagetext'>
               {message.message}
             </div>
-            {/* <div className="time"> {moment().format('Do MMMM YYYY h:mm:ss')}</div> */}
             <div className="time"> {moment(message.timestamp).format('Do MMMM YYYY h:mm:ss')}</div>
           </div>
         );
