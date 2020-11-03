@@ -7,7 +7,7 @@ function MesageList({messages,recivedMesages}) {
            <div className="message-list">                 
             {messages.slice(-3).map(message => {
               return (
-               <div className={`${message.author==="Dragan" ? "containermesage-left" : "containermesage-right"}`}  
+               <div className={`mesage ${message.author==="Dragan" ? "containermesage-right" : "containermesage-left"}`}  
                 key={message._id}>
 
                  <div className="id">

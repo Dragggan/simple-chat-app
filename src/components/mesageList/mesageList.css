@@ -3,45 +3,43 @@ body {
 }
 
 .message-list {
+  display: flex;
+  flex-direction: column;
   border:solid red 1px;
   position: relative;
     height: 70vh;
     top: 40px;
 }
 
+.mesage {
+  margin: 8px 0;
+  width: 60%;
+  height: 20%;
+  border: solid gray 1px;
+  position: relative;
+}
+
 .containermesage-left {
-  width: 200px;
-  max-width: 640px;
-  height: 70px;
+  align-self: flex-start;
   background-color: white;
   border-radius: 10px;
-  border: solid gray 1px;
-  text-decoration: none;
-  margin-bottom: 8px;
-  margin-top: 8px;
-  position: relative;
-    left: 24px;
-    text-align: left;
-    padding-left: 10px;
-    padding-top: 5px;
+  text-align: left;
+  padding-left: 10px;
+  left: 24px;
+
+
 
 }
 .containermesage-right {
-  width: 200px;
-  max-width: 640px;
-  height: 70px;
+  align-self: flex-end;
   background-color: #efef84;
   border-radius: 10px;
-  border: solid gray 1px;
-  text-decoration: none;
-  margin-bottom: 8px;
-  margin-top: 8px;
-  position: relative;
-  text-align: right;
-  padding-top: 5px;
   padding-right: 10px;
-  float: right;
   right: 24px;
+  text-align: right;
+ 
+
+
 }
 
 div.id {
