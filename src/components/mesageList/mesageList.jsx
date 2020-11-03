@@ -4,10 +4,10 @@ import moment from 'moment';
 moment().format();
 
 
-function MesageList({ messages, recivedMesages }) {
+function MesageList({ messages }) {
   return (
     <div className="message-list-container">
-      {messages.slice(-5).map(message => {
+      { messages.slice(-5).map(message => {
         return (
           <div className={`mesage ${message.author === "Dragan" ? "containermesage-right" : "containermesage-left"}`}
             key={message._id}>
@@ -17,7 +17,8 @@ function MesageList({ messages, recivedMesages }) {
             <div className='mesagetext'>
               {message.message}
             </div>
-            <div className="time"> {moment().format('Do MMMM YYYY h:mm:ss')}</div>
+            {/* <div className="time"> {moment().format('Do MMMM YYYY h:mm:ss')}</div> */}
+            <div className="time"> {moment(message.timestamp).format('Do MMMM YYYY h:mm:ss')}</div>
           </div>
         );
       })}

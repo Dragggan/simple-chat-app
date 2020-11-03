@@ -4,7 +4,7 @@ import './sendMesage.css';
 import { InputGroup, Button, FormControl } from 'react-bootstrap';
 import {TOKEN_KEY} from '../../constant/tokenKey';
 
-function SendMesage() {
+function SendMesage( {sendDataToParent}) {
   const [currentmesage, sendMesage] = useState('');
 
   const sendingMesage = (val) => {
@@ -18,12 +18,14 @@ function SendMesage() {
     }
   };
 
-  const sendMsage = () => {
+  const sendMesageEvent = () => {
     axios.post(`https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0`,
       { message: currentmesage, author: "Dragan" },
       options)
       .then(response => console.log(response))
       .catch(err => console.log(err));
+
+      sendDataToParent(currentmesage)
   };
 
 
@@ -31,7 +33,7 @@ function SendMesage() {
     <div className="send-section-container" >
       <InputGroup className="mb-3">
         <FormControl aria-describedby="basic-addon1" className="input-text" onChange={(e) => sendingMesage(e.target.value)} />
-          <Button variant="warning"  className="send-button" onClick={sendMsage}>Send</Button>
+          <Button variant="warning"  className="send-button" onClick={sendMesageEvent}>Send</Button>
       </InputGroup>
     </div>
   );

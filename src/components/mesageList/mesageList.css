@@ -23,7 +23,7 @@ body {
 .containermesage-left {
   align-self: flex-start;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: left;
   padding: 16px;
   left: 24px;
@@ -31,7 +31,7 @@ body {
 .containermesage-right {
   align-self: flex-end;
   background-color: #fcf6c5;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 16px;
   right: 24px;
   text-align: right;
