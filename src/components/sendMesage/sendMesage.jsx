@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './sendMesage.css'
-import {InputGroup, Button,FormControl} from 'react-bootstrap';
+import './sendMesage.css';
+import { InputGroup, Button, FormControl } from 'react-bootstrap';
 
 function SendMesage() {
   const [currentmesage, sendMesage] = useState('');
 
 
   const sendingMesage = (val) => {
-    sendMesage(val)
+    sendMesage(val);
   };
 
   const TOKEN_KEY = "UQngykNP5WHC";
@@ -32,14 +32,14 @@ function SendMesage() {
 
   return (
     <div className="send-section-container" >
-        <InputGroup className="mb-3">
-    <InputGroup.Prepend>
-      <Button variant="outline-secondary" onClick={sendMsage}>Send</Button>
-    </InputGroup.Prepend>
-    <FormControl aria-describedby="basic-addon1" onChange={(e) => sendingMesage(e.target.value)}/>
-  </InputGroup>
-      
-      
+      <InputGroup className="mb-3">
+     
+        
+        <FormControl aria-describedby="basic-addon1" className="input-text" onChange={(e) => sendingMesage(e.target.value)} />
+          <Button variant="warning"  className="send-button" onClick={sendMsage}>Send</Button>
+      </InputGroup>
+
+
     </div>
   );
 }

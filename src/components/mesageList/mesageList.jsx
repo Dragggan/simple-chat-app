@@ -1,10 +1,13 @@
 import React from 'react'
 import  './mesageList.css'
+import moment from 'moment';
+moment().format();
+
 
 function MesageList({messages,recivedMesages}) {
     return (
            <div className="message-list-container">                 
-            {messages.slice(-3).map(message => {
+            {messages.slice(-5).map(message => {
               return (
                <div className={`mesage ${message.author==="Dragan" ? "containermesage-right" : "containermesage-left"}`}  
                 key={message._id}>
@@ -15,7 +18,7 @@ function MesageList({messages,recivedMesages}) {
                  <div className='mesagetext'>
                    {message.message}
                  </div>
-                  <div  className="id"> {new Date().toLocaleDateString()}</div>
+                  <div  className="time"> {moment().format('Do MMMM YYYY h:mm:ss')}</div>
                </div>
              )
            })}

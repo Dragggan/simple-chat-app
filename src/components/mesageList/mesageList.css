@@ -1,19 +1,20 @@
 body {
-  background-image: url('../../assets/bodyBG.png');
+  background-image: url("../../assets/bodyBG.png");
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .message-list-container {
   display: flex;
   flex-direction: column;
-  border:solid red 1px;
   position: relative;
-    height: 50%;
-    top: 40px;
+  top: 40px;
+  min-height: 500px;
 }
 
 .mesage {
   margin: 8px 0;
-  width: 60%;
+  width: 240px;
   height: 20%;
   border: solid gray 1px;
   position: relative;
@@ -24,14 +25,14 @@ body {
   background-color: white;
   border-radius: 10px;
   text-align: left;
-  padding-left: 10px;
+  padding: 16px;
   left: 24px;
 }
 .containermesage-right {
   align-self: flex-end;
-  background-color: #efef84;
+  background-color: #fcf6c5;
   border-radius: 10px;
-  padding-right: 10px;
+  padding: 16px;
   right: 24px;
   text-align: right;
 }
@@ -43,4 +44,9 @@ div.id {
 div.mesagetext {
   font-weight: bold;
   font-size: 16px;
+}
+
+.time {
+  color: gray;
+  font-size: 11px;
 }
