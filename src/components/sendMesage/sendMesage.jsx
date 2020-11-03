@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './sendMesage.css'
+import {InputGroup, Button,FormControl} from 'react-bootstrap';
 
 function SendMesage() {
   const [currentmesage, sendMesage] = useState('');
@@ -29,9 +31,15 @@ function SendMesage() {
 
 
   return (
-    <div style={{position:'absolute'}}>
-      <input type='text'  onChange={(e) => sendingMesage(e.target.value)} placeholder="type mesage here" />
-      <button onClick={sendMsage}>Send</button>
+    <div className="send-section-container" >
+        <InputGroup className="mb-3">
+    <InputGroup.Prepend>
+      <Button variant="outline-secondary" onClick={sendMsage}>Send</Button>
+    </InputGroup.Prepend>
+    <FormControl aria-describedby="basic-addon1" onChange={(e) => sendingMesage(e.target.value)}/>
+  </InputGroup>
+      
+      
     </div>
   );
 }

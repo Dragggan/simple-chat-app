@@ -3,8 +3,7 @@ import  './mesageList.css'
 
 function MesageList({messages,recivedMesages}) {
     return (
-        <div>
-           <div className="message-list">                 
+           <div className="message-list-container">                 
             {messages.slice(-3).map(message => {
               return (
                <div className={`mesage ${message.author==="Dragan" ? "containermesage-right" : "containermesage-left"}`}  
@@ -22,7 +21,6 @@ function MesageList({messages,recivedMesages}) {
            })}
            {/* <p className='recivedMesages'>{recivedMesages[0].text}</p> */}
          </div>
-        </div>
     )
 }
 export default MesageList

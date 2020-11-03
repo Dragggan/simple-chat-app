@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import Title from './components/title/title.jsx';
 import SendMesage from './components/sendMesage/sendMesage.jsx';
 import MesageList from './components/mesageList/mesageList.jsx';
 import './components/mesageList/mesageList.css';
@@ -66,7 +65,6 @@ ${TOKEN_KEY}`)
 
   return (
     <div className="App">
-      <Title />
       <MesageList messages={messages} recivedMesages={recivedMesages} />
       <SendMesage />
       {/* <Websocket url='ws://localhost:3000'
